@@ -3,6 +3,10 @@ class Dict {
     this._properties = {}
   }
 
+  keys () {
+    return Object.keys(this._properties)
+  }
+
   set (key, value) {
     this._properties[key] = value
   }

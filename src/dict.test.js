@@ -7,6 +7,15 @@ describe('Dict', () => {
     dict = new Dict()
   })
 
+  describe('keys', () => {
+    it('returns an array of property names', () => {
+      dict.set('foo', 1)
+      dict.set('bar', 2)
+
+      expect(dict.keys()).toEqual(expect.arrayContaining(['foo', 'bar']))
+    })
+  })
+
   describe('set', () => {
     it('defines a property and his value in the dictionary', () => {
       dict.set('foo', 1)
