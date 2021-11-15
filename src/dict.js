@@ -3,6 +3,14 @@ class Dict {
     this._properties = {}
   }
 
+  delete (key) {
+    if (!this.has(key)) {
+      return false
+    }
+    delete this._properties[key]
+    return true
+  }
+
   has (key) {
     return Object.hasOwnProperty.call(this._properties, key)
   }

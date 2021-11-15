@@ -7,6 +7,19 @@ describe('Dict', () => {
     dict = new Dict()
   })
 
+  describe('delete', () => {
+    it('returns false when the property is not in the dictionary', () => {
+      expect(dict.delete('foo')).toBe(false)
+    })
+
+    it('removes a property of the dictionary and returns true', () => {
+      dict.set('foo', 1)
+
+      expect(dict.delete('foo')).toBe(true)
+      expect(dict.has('foo')).toBe(false)
+    })
+  })
+
   describe('has', () => {
     it('tests if a property is in the dictionary', () => {
       expect(dict.has('foo')).toBe(false)
