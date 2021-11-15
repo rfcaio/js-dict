@@ -29,4 +29,13 @@ describe('Dict', () => {
       expect(dict.size).toBe(0)
     })
   })
+
+  describe('values', () => {
+    it('returns an array of property values', () => {
+      dict.set('foo', 1)
+      dict.set('bar', 2)
+
+      expect(dict.values()).toEqual(expect.arrayContaining([1, 2]))
+    })
+  })
 })

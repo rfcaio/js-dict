@@ -14,6 +14,10 @@ class Dict {
   get size () {
     return Object.keys(this._properties).length
   }
+
+  values () {
+    return Object.values(this._properties)
+  }
 }
 
 module.exports = Dict
