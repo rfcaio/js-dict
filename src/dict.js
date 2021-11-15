@@ -3,6 +3,10 @@ class Dict {
     this._properties = {}
   }
 
+  has (key) {
+    return Object.hasOwnProperty.call(this._properties, key)
+  }
+
   keys () {
     return Object.keys(this._properties)
   }

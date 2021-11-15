@@ -7,6 +7,16 @@ describe('Dict', () => {
     dict = new Dict()
   })
 
+  describe('has', () => {
+    it('tests if a property is in the dictionary', () => {
+      expect(dict.has('foo')).toBe(false)
+
+      dict.set('foo', 1)
+
+      expect(dict.has('foo')).toBe(true)
+    })
+  })
+
   describe('keys', () => {
     it('returns an array of property names', () => {
       dict.set('foo', 1)
