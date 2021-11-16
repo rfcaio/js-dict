@@ -31,6 +31,18 @@ describe('Dict', () => {
     })
   })
 
+  describe('get', () => {
+    it('returns undefined when the property is not in the dictionary', () => {
+      expect(dict.get('foo')).toBeUndefined()
+    })
+
+    it('returns the property value', () => {
+      dict.set('foo', 1)
+
+      expect(dict.get('foo')).toBe(1)
+    })
+  })
+
   describe('has', () => {
     it('tests if a property is in the dictionary', () => {
       expect(dict.has('foo')).toBe(false)

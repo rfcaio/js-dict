@@ -15,6 +15,10 @@ class Dict {
     return true
   }
 
+  get (key) {
+    return this._properties[key]
+  }
+
   has (key) {
     return Object.hasOwnProperty.call(this._properties, key)
   }
