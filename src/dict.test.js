@@ -7,6 +7,17 @@ describe('Dict', () => {
     dict = new Dict()
   })
 
+  describe('clear', () => {
+    it('removes all of the properties in the dictionary', () => {
+      dict.set('foo', 1)
+      dict.set('bar', 2)
+
+      dict.clear()
+
+      expect(dict.keys()).toEqual([])
+    })
+  })
+
   describe('delete', () => {
     it('returns false when the property is not in the dictionary', () => {
       expect(dict.delete('foo')).toBe(false)

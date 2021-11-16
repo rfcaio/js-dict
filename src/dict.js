@@ -3,6 +3,10 @@ class Dict {
     this._properties = {}
   }
 
+  clear () {
+    this._properties = {}
+  }
+
   delete (key) {
     if (!this.has(key)) {
       return false
